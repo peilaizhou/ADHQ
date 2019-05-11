@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>视频赏析</title>
+	<style>
+		*{margin:0px;padding:0px;}
+		.banner{
+			width:100%;
+			height:170px;
+			margin:0px auto;
+			background:#ffffff;
+		}
+		.banner>.tel{
+			width:100%;
+			height:12px;
+			margin:0px auto;
+			margin-top:12px;
+			display:inline-block;
+		}
+		.banner>.tel>span{
+			height:12px;
+			margin:0px auto;
+			margin-left:23%;
+			float:left;
+			display:inline-block;
+			font-size:12px;
+		}
+		.banner>.tel>span:last-child{
+			float:right;
+			margin-right:23%;
+		}
+		.banner>.logo{
+			width:76px;
+			height:76px;
+			margin:0px auto;
+			margin-top:34px;
+			margin-left:21%;
+			display:inline-block;
+			background:url(img/logo.png);
+			font-size:24px;
+			color:#fc91a4;
+			font-family:"隶书";
+			text-align:center;
+			line-height:76px;
+		}
+		.banner>.men{
+			width:660px;
+			height:120px;
+			margin:0px auto;
+			margin-top:12px;
+			margin-right:23%;
+			float:right;
+			display:inline-block;
+			list-style:none;
+		}
+		.banner>.men>li{
+			width:110px;
+			height:100%;
+			margin:0px auto;
+			float:left;
+			display:inline-block;
+		}
+		.banner>.men>li:nth-child(4){
+			background:url(img/menu.png);
+		}
+		.banner>.men>li>a{
+			width:100%;
+			height:100%;
+			margin:0px auto;
+			display:inline-block;
+			text-decoration:none;
+			font-size:18px;
+			font-weight:600;
+			color:#000000;
+			line-height:120px;
+			text-align:center;
+		}
+		.banner>.men>li:nth-child(4)>a{
+			color:#ffffff;
+		}
+		.banner>.men>li>a:hover{
+			background:url(img/menu.png);
+			color:#ffffff;
+		}
+		.amazing{
+			width:100%;
+			height:800px;
+			margin:0px auto;
+			background:url(img/amazing2.jpg);
+			background-size:100% 100%;
+		}
+		.spsx{
+			width:1100px;
+			height:850px;
+			margin:0px auto;
+			margin-top:60px;
+		}
+		.spsx>.tit{
+			width:100%;
+			height:40px;
+			margin:0px auto;
+			display:inline-block;
+			border-bottom:1px solid #b2b2b2;
+		}
+		.spsx>.tit>b{
+			margin:0px auto;
+			float:left;
+			display:inline-block;
+			font-size:28px;
+			font-weight:100;
+			font-family:"微软雅黑";
+			position:relative;
+		}
+		.spsx>.tit>b:after{
+			content:"";
+			position:absolute;
+			top:7px;
+			left:95px;
+			width:0px;
+			height:24px;
+			border-left:2px solid #ff0000;
+		}
+		.spsx>.tit>p{
+			margin:0px auto;
+			margin-left:20px;
+			margin-top:10px;
+			float:left;
+			display:inline-block;
+			color:#262626;
+		}
+		.spsx>.tit>.dqwz{
+			margin:0px auto;
+			display:inline-block;
+			float:right;
+		}
+		.spsx>.tit>.dqwz>a{
+			margin:0px auto;
+			display:inline-block;
+			color:#ababab;
+			font-size:12px;
+			line-height:40px;
+			text-decoration:none;
+		}
+		.spsx>.tit>.dqwz>a:last-child{
+			color:#f7b3bd;
+		}
+		.spsx>.tit>.dqwz>b{
+			margin:0px auto;
+			display:inline-block;
+			color:#ababab;
+			font-size:12px;
+			line-height:40px;
+			font-weight:100;
+		}
+		.spsx>ul{
+			width:100%;
+			height:730px;
+			margin:0px auto;
+			margin-top:35px;
+			display:inline-block;
+			list-style:none;
+		}
+		.spsx>ul>li{
+			width:260px;
+			height:350px;
+			margin:0px auto;
+			margin-right:20px;
+			margin-bottom:15px;
+			border-radius:8px 8px 8px 8px;
+			display:inline-block;
+			float:left;
+			background:url(img/video.png);
+			background-size:100% 100%;
+		}
+		.spsx>ul>li:nth-child(4),.spsx>ul>li:last-child{
+			margin-right:0px;
+		}
+		.spsx>ul>li>.play{
+			width:100%;
+			height:300px;
+			margin:0px auto;
+			border-radius:8px 8px 0px 0px;
+			display:inline-block;
+			background:rgba(0,0,0,0.32);
+		}
+		.spsx>ul>li>.play>a{
+			width:70px;
+			height:70px;
+			margin:0px auto;
+			margin-top:115px;
+			margin-left:95px;
+			border-radius:50% 50%;
+			display:inline-block;
+			background:url(img/play.png);
+		}
+		.spsx>ul>li>.bot{
+			width:100%;
+			height:50px;
+			margin:0px auto;
+			border-radius:0px 0px 8px 8px;
+			display:inline-block;
+			background:#3d3d3d;
+		}
+		.spsx>ul>li>.bot>span{
+			margin:0px auto;
+			float:left;
+			display:inline-block;
+			padding-top:5px;
+			padding-left:10px;
+			color:#ffffff;
+			font-size:13px;
+			font-weight:600;
+		}
+		.spsx>ul>li>.bot>a{
+			width:16px;
+			height:13px;
+			margin:0px auto;
+			margin-right:10px;
+			margin-top:25px;
+			float:right;
+			display:inline-block;
+		}
+		.spsx>ul>li>.bot>.dianzan{
+			background:url(img/dianzan.png) center center;
+		}
+		.spsx>ul>li>.bot>.liulan{
+			width:16px;
+			height:11px;
+			margin-top:26px;
+			background:url(img/liulan.png) center center;
+		}
+		.spsx>ul>li>.bot>.zhuanfa{
+			background:url(img/zhuanfa.png) center center;
+		}
+		.spsx>.ckgd{
+			width:100%;
+			margin:0px auto;
+			margin-top:8px;
+			display:inline-block;
+			text-decoration:none;
+			font-size:18px;
+			color:#000000;
+			text-align:center;
+			position:relative;
+		}
+		.spsx>.ckgd:after{
+			content:"";
+			width:72px;
+			height:0px;
+			border-bottom:2px solid #ff4d6d;
+			position:absolute;
+			top:26px;
+			left:513px;
+		}
+		.tail{
+			width:100%;
+			margin:0px auto;
+			margin-top:40px;
+			border-top:20px solid #ff4d6d;
+			display:inline-block;
+			background:url(img/tail.jpg);
+		}
+		.tail>.aidi{
+			width:100%;
+			height:225px;
+			margin:0px auto;
+			background:rgba(26,26,26,0.7);
+			display:inline-block;
+		}
+		.tail>.aidi>.aidib{
+			width:1100px;
+			height:100%;
+			margin:0px auto;
+		}
+		.tail>.aidi>.aidib>dl{
+			width:200px;
+			height:165px;
+			margin:0px auto;
+			padding-left:20px;
+			float:left;
+			display:inline-block;
+			margin-top:60px;
+		}
+		.tail>.aidi>.aidib>dl>dt{
+			width:100%;
+			margin:0px auto;
+			display:inline-block;
+			margin-bottom:14px;
+			font-size:20px;
+			font-weight:600;
+			color:#ffffff;
+		}
+		.tail>.aidi>.aidib>dl>dd>a{
+			width:100%;
+			margin:0px auto;
+			display:inline-block;
+			margin-bottom:10px;
+			text-decoration:none;
+			font-size:15px;
+			font-weight:600;
+			color:#ffffff;
+		}
+		.tail>.aidi>.aidib>dl:last-child>.pic{
+			width:130px;
+			height:130px;
+			margin:0px auto;
+			display:inline-block;
+			background:url(img/ewm.gif);
+			background-size:100% 100%;
+		}
+		.tail>.aidi>.aidib>dl:last-child>p{
+			width:100%;
+			margin:0px auto;
+			display:inline-block;
+			font-size:15px;
+			font-weight:600;
+			color:#ffffff;
+		}
+		.tail>.bah{
+			width:100%;
+			height:70px;
+			margin:0px auto;
+			margin-top:-4px;
+			background:rgba(32,32,32,0.9);
+			display:inline-block;
+		}
+		.tail>.bah>.bahb{
+			width:1100px;
+			height:100%;
+			margin:0px auto;
+		}
+		.tail>.bah>.bahb>span{
+			margin:0px auto;
+			display:inline-block;
+			float:left;
+			font-size:12px;
+			line-height:70px;
+			color:#ffffff;
+		}
+		.tail>.bah>.bahb>p{
+			margin:0px auto;
+			float:right;
+			display:inline-block;
+			font-size:12px;
+			line-height:70px;
+			color:#ffffff;
+			margin-right:11px;
+			position:relative;
+		}
+		.tail>.bah>.bahb>p:after{
+			content:"";
+			width:0px;
+			height:12px;
+			border-left:1px solid #ffffff;
+			position:absolute;
+			left:52px;
+			top:29px;
+		}
+		.tail>.bah>.bahb>.xlwb,.tail>.bah>.bahb>.txwb{
+			margin:0px auto;
+			float:right;
+			display:inline-block;
+			text-decoration:none;
+			font-size:12px;
+			line-height:70px;
+			color:#ffffff;
+			margin-right:11px;
+			position:relative;
+		}
+		.tail>.bah>.bahb>.txwb:after{
+			content:"";
+			width:0px;
+			height:12px;
+			border-left:1px solid #ffffff;
+			position:absolute;
+			left:52px;
+			top:29px;
+		}
+	</style>
+</head>
+<body>
+	<div class="banner">
+		<div class="tel">
+			<span>欢迎登录艾迪婚庆网站！</span>
+			<span>联系热线:66600000</span>
+		</div>
+		<p class="logo">艾迪</p>
+		<ul class="men">
+			<li><a href="adsy.html">网站首页</a></li>
+			<li><a href="gsjj.html">公司简介</a></li>
+			<li><a href="hlxl.html">婚礼系列</a></li>
+			<li><a href="spsx.html">视频欣赏</a></li>
+			<li><a href="fwzx.html">服务中心</a></li>
+			<li><a href="lxwm.html">联系我们</a></li>
+		</ul>
+	</div>
+	<div class="amazing"></div>
+	<div class="spsx">
+		<div class="tit">
+			<b>VIDEO</b>
+			<p>视频赏析</p>
+			<div class="dqwz">
+				<b>当前位置&nbsp;:&nbsp;</b>
+				<a href="#">网站首页</a>
+				<b>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</b>
+				<a href="#">视频赏析</a>
+			</div>
+		</div>
+		<ul>
+			<li>
+				<div class="play">
+					<a href="#"></a>
+				</div>
+				<div class="bot">
+					<span>嘉禾酒店浪漫婚礼</span>
+					<a href="#" class="zhuanfa"></a>
+					<a href="#" class="liulan"></a>
+					<a href="#" class="dianzan"></a>
+				</div>
+			</li>
+			<li>
+				<div class="play">
+					<a href="#"></a>
+				</div>
+				<div class="bot">
+					<span>嘉禾酒店浪漫婚礼</span>
+					<a href="#" class="zhuanfa"></a>
+					<a href="#" class="liulan"></a>
+					<a href="#" class="dianzan"></a>
+				</div>
+			</li>
+			<li>
+				<div class="play">
+					<a href="#"></a>
+				</div>
+				<div class="bot">
+					<span>嘉禾酒店浪漫婚礼</span>
+					<a href="#" class="zhuanfa"></a>
+					<a href="#" class="liulan"></a>
+					<a href="#" class="dianzan"></a>
+				</div>
+			</li>
+			<li>
+				<div class="play">
+					<a href="#"></a>
+				</div>
+				<div class="bot">
+					<span>嘉禾酒店浪漫婚礼</span>
+					<a href="#" class="zhuanfa"></a>
+					<a href="#" class="liulan"></a>
+					<a href="#" class="dianzan"></a>
+				</div>
+			</li>
+			<li>
+				<div class="play">
+					<a href="#"></a>
+				</div>
+				<div class="bot">
+					<span>嘉禾酒店浪漫婚礼</span>
+					<a href="#" class="zhuanfa"></a>
+					<a href="#" class="liulan"></a>
+					<a href="#" class="dianzan"></a>
+				</div>
+			</li>
+			<li>
+				<div class="play">
+					<a href="#"></a>
+				</div>
+				<div class="bot">
+					<span>嘉禾酒店浪漫婚礼</span>
+					<a href="#" class="zhuanfa"></a>
+					<a href="#" class="liulan"></a>
+					<a href="#" class="dianzan"></a>
+				</div>
+			</li>
+			<li>
+				<div class="play">
+					<a href="#"></a>
+				</div>
+				<div class="bot">
+					<span>嘉禾酒店浪漫婚礼</span>
+					<a href="#" class="zhuanfa"></a>
+					<a href="#" class="liulan"></a>
+					<a href="#" class="dianzan"></a>
+				</div>
+			</li>
+			<li>
+				<div class="play">
+					<a href="#"></a>
+				</div>
+				<div class="bot">
+					<span>嘉禾酒店浪漫婚礼</span>
+					<a href="#" class="zhuanfa"></a>
+					<a href="#" class="liulan"></a>
+					<a href="#" class="dianzan"></a>
+				</div>
+			</li>
+		</ul>
+		<a href="#" class="ckgd">查看更多</a>
+	</div>
+	<div class="tail">
+		<div class="aidi">
+			<div class="aidib">
+				<dl>
+					<dt>案例赏析</dt>
+					<dd><a href="#">韩风系列</a></dd>
+					<dd><a href="#">欧版系列</a></dd>
+					<dd><a href="#">日系甜美系列</a></dd>
+					<dd><a href="#">清新自然系列</a></dd>
+				</dl>
+				<dl>
+					<dt>新闻动态</dt>
+					<dd><a href="#">最新活动</a></dd>
+					<dd><a href="#">摄影交流</a></dd>
+					<dd><a href="#">行业资讯</a></dd>
+				</dl>
+				<dl>
+					<dt>婚礼场地</dt>
+					<dd><a href="#">酒店场景</a></dd>
+					<dd><a href="#">婚礼外景</a></dd>
+				</dl>
+				<dl>
+					<dt>联系我们</dt>
+					<dd><a href="#">人才招聘</a></dd>
+					<dd><a href="#">在线预订</a></dd>
+					<dd><a href="#">服务流程</a></dd>
+					<dd><a href="#">关于我们</a></dd>
+				</dl>
+				<dl>
+					<div class="pic"></div>
+					<p>扫描二维码</p>
+				</dl>
+			</div>
+		</div>
+		<div class="bah">
+			<div class="bahb">
+				<span>Copyright ©2008 - 2018 合肥艾迪婚庆有限责任公司  皖ICP 备8546210号-1</span>
+				<a href="#" class="xlwb">新浪微博</a>
+				<a href="#" class="txwb">腾讯微博</a>
+				<p>友情链接</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

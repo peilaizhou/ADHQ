@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>网站首页</title>
+	<style>
+		*{margin:0px;padding:0px;}
+		.banner{
+			width:100%;
+			height:170px;
+			margin:0px auto;
+			background:#ffffff;
+		}
+		.banner>.tel{
+			width:100%;
+			height:12px;
+			margin:0px auto;
+			margin-top:12px;
+			display:inline-block;
+		}
+		.banner>.tel>span{
+			height:12px;
+			margin:0px auto;
+			margin-left:23%;
+			float:left;
+			display:inline-block;
+			font-size:12px;
+		}
+		.banner>.tel>span:last-child{
+			float:right;
+			margin-right:23%;
+		}
+		.banner>.logo{
+			width:76px;
+			height:76px;
+			margin:0px auto;
+			margin-top:34px;
+			margin-left:21%;
+			display:inline-block;
+			background:url(img/logo.png);
+			font-size:24px;
+			color:#fc91a4;
+			font-family:"隶书";
+			text-align:center;
+			line-height:76px;
+		}
+		.banner>.men{
+			width:660px;
+			height:120px;
+			margin:0px auto;
+			margin-top:12px;
+			margin-right:23%;
+			float:right;
+			display:inline-block;
+			list-style:none;
+		}
+		.banner>.men>li{
+			width:110px;
+			height:100%;
+			margin:0px auto;
+			float:left;
+			display:inline-block;
+		}
+		.banner>.men>li:first-child{
+			background:url(img/menu.png);
+		}
+		.banner>.men>li>a{
+			width:100%;
+			height:100%;
+			margin:0px auto;
+			display:inline-block;
+			text-decoration:none;
+			font-size:18px;
+			font-weight:600;
+			color:#000000;
+			line-height:120px;
+			text-align:center;
+		}
+		.banner>.men>li:first-child>a{
+			color:#ffffff;
+		}
+		.banner>.men>li>a:hover{
+			background:url(img/menu.png);
+			color:#ffffff;
+		}
+		.amazing{
+			width:100%;
+			height:800px;
+			margin:0px auto;
+			background:url(img/amazing.png);
+			background-size:100% 100%;
+		}
+		.liucheng{
+			width:1100px;
+			height:300px;
+			margin:0px auto;
+			margin-top:60px;
+			list-style:none;
+		}
+		.liucheng>li{
+			width:196px;
+			height:100%;
+			margin:0px auto;
+			margin-left:20px;
+			float:left;
+			display:inline-block;
+		}
+		.liucheng>li>.but{
+			width:80px;
+			height:80px;
+			margin:0px auto;
+			border-radius:50% 50%;
+			display:block;
+			text-decoration:none;
+			background:url(img/gywm.png);
+		}
+		.liucheng>li:nth-child(2)>.but{
+			background:url(img/fwlc.png);
+		}
+		.liucheng>li:nth-child(3)>.but{
+			background:url(img/hlcd.png);
+		}
+		.liucheng>li:nth-child(4)>.but{
+			background:url(img/spsx.png);
+		}
+		.liucheng>li:last-child>.but{
+			background:url(img/lxwm.png);
+		}
+		.liucheng>li>.dx{
+			margin:0px auto;
+			margin-top:17px;
+			font-size:20px;
+			font-family:"Times New Roman";
+			text-align:center;
+		}
+		.liucheng>li>.xx{
+			margin:0px auto;
+			font-size:12px;
+			font-family:"Times New Roman";
+			text-align:center;
+			color:#8d8d8d;
+		}
+		.liucheng>li>.tit{
+			margin:0px auto;
+			margin-top:5px;
+			font-size:18px;
+			text-align:center;
+		}
+		.liucheng>li:first-child>.tit{
+			margin-top:8px;
+		}
+		.liucheng>li>span{
+			margin:0px auto;
+			font-size:12px;
+			text-align:center;
+			color:#8d8d8d;
+			display:block;
+		}
+		.weddingcase{
+			width:1100px;
+			height:720px;
+			margin:0px auto;
+		}
+		.weddingcase>.tit{
+			width:100%;
+			height:35px;
+			margin:0px auto;
+			display:inline-block;
+			border-bottom:1px solid #b2b2b2;
+		}
+		.weddingcase>.tit>b{
+			margin:0px auto;
+			float:left;
+			display:inline-block;
+			font-size:28px;
+			font-weight:100;
+			font-family:"微软雅黑";
+			position:relative;
+		}
+		.weddingcase>.tit>b:after{
+			content:"";
+			position:absolute;
+			top:6px;
+			left:215px;
+			width:0px;
+			height:24px;
+			border-left:2px solid #ff0000;
+		}
+		.weddingcase>.tit>p{
+			margin:0px auto;
+			margin-left:20px;
+			margin-top:10px;
+			float:left;
+			display:inline-block;
+			color:#262626;
+		}
+		.weddingcase>.tit>a{
+			margin:0px auto;
+			margin-right:30px;
+			float:right;
+			display:inline-block;
+			color:#c0c0c0;
+			font-size:12px;
+			line-height:35px;
+			text-decoration:none;
+		}
+		.weddingcase>.zpq{
+			width:100%;
+			height:645px;
+			margin:0px auto;
+			margin-top:39px;
+			display:inline-block;
+			list-style:none;
+		}
+		.weddingcase>.zpq>li{
+			width:260px;
+			height:200px;
+			margin:10px;
+			float:left;
+			display:inline-block;
+			background:url(img/photo1.jpg) center center;
+		}
+		.weddingcase>.zpq>li:first-child{
+			width:540px;
+			height:420px;
+			margin-top:0px;
+			margin-left:0px;
+		}
+		.weddingcase>.zpq>li:nth-child(2){
+			margin-top:0px;
+			background:url(img/photo2.jpg);
+			background-size:100% 100%;
+		}
+		.weddingcase>.zpq>li:nth-child(3){
+			margin-top:0px;
+			margin-right:0px;
+			background:url(img/photo3.jpg);
+			background-size:100% 100%;
+		}
+		.weddingcase>.zpq>li:nth-child(4){
+			background:url(img/photo4.jpeg);
+			background-size:100% 100%;
+		}
+		.weddingcase>.zpq>li:nth-child(5){
+			margin-right:0px;
+			background:url(img/photo5.jpg);
+			background-size:100% 100%;
+		}
+		.weddingcase>.zpq>li:nth-child(6){
+			margin-left:0px;
+			margin-bottom:0px;
+			background:url(img/photo6.jpg);
+			background-size:100% 100%;
+		}
+		.weddingcase>.zpq>li:nth-child(7){
+			margin-bottom:0px;
+			background:url(img/photo7.jpg);
+			background-size:100% 100%;
+		}
+		.weddingcase>.zpq>li:nth-child(8){
+			margin-bottom:0px;
+			background:url(img/photo8.jpg);
+			background-size:100% 100%;
+		}
+		.weddingcase>.zpq>li:last-child{
+			margin-right:0px;
+			margin-bottom:0px;
+			background:url(img/photo9.jpg);
+			background-size:100% 100%;
+		}
+		.weddingcase>.zpq>li>a{
+			width:100%;
+			height:100%;
+			margin:0px auto;
+			display:inline-block;
+			text-decoration:none;
+		}
+		.wenan{
+			width:750px;
+			height:100px;
+			margin:0px auto;
+			margin-top:130px;
+			position:relative;
+		}
+		.wenan:before{
+			content:"";
+			width:20px;
+			height:30px;
+			position:absolute;
+			left:0px;
+			top:-5px;
+			border-top:4px solid #ff4d6d;
+			border-left:4px solid #ff4d6d;
+			box-sizing:border-box;
+		}
+		.wenan:after{
+			content:"";
+			width:20px;
+			height:30px;
+			position:absolute;
+			right:0px;
+			bottom:-5px;
+			border-bottom:4px solid #ff4d6d;
+			border-right:4px solid #ff4d6d;
+			box-sizing:border-box;
+		}
+		.wenan>.chn{
+			width:100%;
+			margin:0px auto;
+			display:inline-block;
+			font-size:24px;
+			color:#ff4d6d;
+			text-align:center;
+		}
+		.wenan>.eng{
+			width:100%;
+			margin:0px auto;
+			margin-top:8px;
+			display:inline-block;
+			font-size:12px;
+			color:#c5b496;
+			text-align:center;
+		}
+		.tail{
+			width:100%;
+			margin:0px auto;
+			margin-top:100px;
+			border-top:20px solid #ff4d6d;
+			display:inline-block;
+			background:url(img/tail.jpg);
+		}
+		.tail>.aidi{
+			width:100%;
+			height:225px;
+			margin:0px auto;
+			background:rgba(26,26,26,0.7);
+			display:inline-block;
+		}
+		.tail>.aidi>.aidib{
+			width:1100px;
+			height:100%;
+			margin:0px auto;
+		}
+		.tail>.aidi>.aidib>dl{
+			width:200px;
+			height:165px;
+			margin:0px auto;
+			padding-left:20px;
+			float:left;
+			display:inline-block;
+			margin-top:60px;
+		}
+		.tail>.aidi>.aidib>dl>dt{
+			width:100%;
+			margin:0px auto;
+			display:inline-block;
+			margin-bottom:14px;
+			font-size:20px;
+			font-weight:600;
+			color:#ffffff;
+		}
+		.tail>.aidi>.aidib>dl>dd>a{
+			width:100%;
+			margin:0px auto;
+			display:inline-block;
+			margin-bottom:10px;
+			text-decoration:none;
+			font-size:15px;
+			font-weight:600;
+			color:#ffffff;
+		}
+		.tail>.aidi>.aidib>dl:last-child>.pic{
+			width:130px;
+			height:130px;
+			margin:0px auto;
+			display:inline-block;
+			background:url(img/ewm.gif);
+			background-size:100% 100%;
+		}
+		.tail>.aidi>.aidib>dl:last-child>p{
+			width:100%;
+			margin:0px auto;
+			display:inline-block;
+			font-size:15px;
+			font-weight:600;
+			color:#ffffff;
+		}
+		.tail>.bah{
+			width:100%;
+			height:70px;
+			margin:0px auto;
+			margin-top:-4px;
+			background:rgba(32,32,32,0.9);
+			display:inline-block;
+		}
+		.tail>.bah>.bahb{
+			width:1100px;
+			height:100%;
+			margin:0px auto;
+		}
+		.tail>.bah>.bahb>span{
+			margin:0px auto;
+			display:inline-block;
+			float:left;
+			font-size:12px;
+			line-height:70px;
+			color:#ffffff;
+		}
+		.tail>.bah>.bahb>p{
+			margin:0px auto;
+			float:right;
+			display:inline-block;
+			font-size:12px;
+			line-height:70px;
+			color:#ffffff;
+			margin-right:11px;
+			position:relative;
+		}
+		.tail>.bah>.bahb>p:after{
+			content:"";
+			width:0px;
+			height:12px;
+			border-left:1px solid #ffffff;
+			position:absolute;
+			left:52px;
+			top:29px;
+		}
+		.tail>.bah>.bahb>.xlwb,.tail>.bah>.bahb>.txwb{
+			margin:0px auto;
+			float:right;
+			display:inline-block;
+			text-decoration:none;
+			font-size:12px;
+			line-height:70px;
+			color:#ffffff;
+			margin-right:11px;
+			position:relative;
+		}
+		.tail>.bah>.bahb>.txwb:after{
+			content:"";
+			width:0px;
+			height:12px;
+			border-left:1px solid #ffffff;
+			position:absolute;
+			left:52px;
+			top:29px;
+		}
+	</style>
+</head>
+<body>
+	<div class="banner">
+		<div class="tel">
+			<span>欢迎登录艾迪婚庆网站！</span>
+			<span>联系热线:66600000</span>
+		</div>
+		<p class="logo">艾迪</p>
+		<ul class="men">
+			<li><a href="adsy.html">网站首页</a></li>
+			<li><a href="gsjj.html">公司简介</a></li>
+			<li><a href="hlxl.html">婚礼系列</a></li>
+			<li><a href="spsx.html">视频欣赏</a></li>
+			<li><a href="fwzx.html">服务中心</a></li>
+			<li><a href="lxwm.html">联系我们</a></li>
+		</ul>
+	</div>
+	<div class="amazing"></div>
+	<ul class="liucheng">
+		<li>
+			<a href="#" class="but"></a>
+			<p class="dx">COMMUNCATION</p>
+			<p class="xx">communcation with professional wedding</p>
+			<p class="tit">关于我们</p>
+			<span>专业婚礼顾问，快速解疑</span>
+		</li>
+		<li>
+			<a href="#" class="but"></a>
+			<p class="dx">SERVICES</p>
+			<p class="xx">Refine the every link of the wedding</p>
+			<br>
+			<p class="tit">服务流程</p>
+			<span>细化婚礼的每一个环节</span>
+		</li>
+		<li>
+			<a href="#" class="but"></a>
+			<p class="dx">COUNTDOWN</p>
+			<p class="xx">The wedding drill is ready</p>
+			<br>
+			<p class="tit">婚礼场地</p>
+			<span>彩排、演练就绪</span>
+		</li>
+		<li>
+			<a href="#" class="but"></a>
+			<p class="dx">APPRECIATION</p>
+			<p class="xx">Perfect wedding appreciation</p>
+			<br>
+			<p class="tit">视频赏析</p>
+			<span>完美的婚礼赏析</span>
+		</li>
+		<li>
+			<a href="#" class="but"></a>
+			<p class="dx">CONTACT US</p>
+			<p class="xx">Heart liucheng surprises unlimited</p>
+			<br>
+			<p class="tit">联系我们</p>
+			<span>用心服务 惊喜无限</span>
+		</li>
+	</ul>
+	<div class="weddingcase">
+		<div class="tit">
+			<b>WEDDINGCASE</b>
+			<p>婚礼展示</p>
+			<a href="#">查看更多</a>
+		</div>
+		<ul class="zpq">
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+		</ul>
+	</div>
+	<div class="wenan">
+		<span class="chn">艾迪— —  历经十年沉淀，延续爱的汇聚，具备时尚及亲和力的<br>婚礼定制品牌，让潮流、热情、优雅凝聚一堂。</span>
+		<span class="eng"> Addie, after ten years of precipitation, continues the convergence of love, with fashion and affinity.<br>Wedding custom brand, let the tide, enthusiasm, grace together.</span>
+	</div>
+	<div class="tail">
+		<div class="aidi">
+			<div class="aidib">
+				<dl>
+					<dt>案例赏析</dt>
+					<dd><a href="#">韩风系列</a></dd>
+					<dd><a href="#">欧版系列</a></dd>
+					<dd><a href="#">日系甜美系列</a></dd>
+					<dd><a href="#">清新自然系列</a></dd>
+				</dl>
+				<dl>
+					<dt>新闻动态</dt>
+					<dd><a href="#">最新活动</a></dd>
+					<dd><a href="#">摄影交流</a></dd>
+					<dd><a href="#">行业资讯</a></dd>
+				</dl>
+				<dl>
+					<dt>婚礼场地</dt>
+					<dd><a href="#">酒店场景</a></dd>
+					<dd><a href="#">婚礼外景</a></dd>
+				</dl>
+				<dl>
+					<dt>联系我们</dt>
+					<dd><a href="#">人才招聘</a></dd>
+					<dd><a href="#">在线预订</a></dd>
+					<dd><a href="#">服务流程</a></dd>
+					<dd><a href="#">关于我们</a></dd>
+				</dl>
+				<dl>
+					<div class="pic"></div>
+					<p>扫描二维码</p>
+				</dl>
+			</div>
+		</div>
+		<div class="bah">
+			<div class="bahb">
+				<span>Copyright ©2008 - 2018 合肥艾迪婚庆有限责任公司  皖ICP 备8546210号-1</span>
+				<a href="#" class="xlwb">新浪微博</a>
+				<a href="#" class="txwb">腾讯微博</a>
+				<p>友情链接</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
